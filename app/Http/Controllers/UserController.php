@@ -13,6 +13,7 @@ class UserController extends Controller
 
         if ($user) {
             return response()->json([
+                'id' => $user->id,
                 'nombre' => $user->nombre,
                 'apellidos' => $user->apellidos,
                 'email' => $user->email,

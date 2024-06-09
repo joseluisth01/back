@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+// HOLA
 
 // Authentication routes
 Route::post('/register', [AuthController::class, 'createUser']);

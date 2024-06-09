@@ -7,6 +7,7 @@ use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\TarjetaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/tarjetas/{tarjetaId}', [TarjetaController::class, 'deleteTarjeta']);
 });
 
-
+Route::middleware('auth:api')->get('/getUser', [UserController::class, 'getUser']);
 
 
